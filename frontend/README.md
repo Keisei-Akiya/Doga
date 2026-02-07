@@ -1,42 +1,49 @@
-# sv
+# Doga - Frontend
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+SvelteKit を使用した Doga のフロントエンドアプリケーションです。
 
-## Creating a project
+## 🚀 技術スタック
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Framework**: Svelte 5 + SvelteKit
+- **Styling**: Tailwind CSS
+- **Components**: shadcn-svelte
+- **Icons**: Lucide Svelte
+- **Formatter/Linter**: Biome
 
-```sh
-# create a new project
-npx sv create my-app
+## 🛠 開発サイクル
+
+### パッケージのインストール
+
+```bash
+bun install
 ```
 
-To recreate this project with the same configuration:
+### 開発サーバーの起動
 
-```sh
-# recreate this project
-bun x sv create --template minimal --types ts --add playwright tailwindcss="plugins:none" vitest="usages:unit,component" storybook --install bun frontend
+```bash
+bun run dev
 ```
 
-## Developing
+サーバーはデフォルトで `http://localhost:3000` で起動します。
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### フォーマットとリント
 
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```bash
+bun run format  # Biome による自動整形
+bun run lint    # チェックのみ
 ```
 
-## Building
+### Storybook
 
-To create a production version of your app:
+コンポーネントを独立して開発・カタログ化するためのツールです。
 
-```sh
-npm run build
+```bash
+bun run sb               # Storybook を起動 (http://localhost:6006)
+bun run build-storybook  # ビルド
 ```
 
-You can preview the production build with `npm run preview`.
+## 📂 ディレクトリ構造
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- `src/routes/`: ページとルーティング
+- `src/lib/`: 共有ロジック、コンポーネント、型定義
+- `static/`: 静的アセット
