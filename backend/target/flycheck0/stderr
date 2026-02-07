@@ -1,0 +1,10 @@
+    Updating crates.io index
+error: failed to select a version for `tower-http`.
+    ... required by package `backend v0.1.0 (/home/keisei/development/Doga/backend)`
+versions that meet the requirements `^0.6` are: 0.6.8, 0.6.7, 0.6.6, 0.6.4, 0.6.2, 0.6.1, 0.6.0
+
+package `backend` depends on `tower-http` with feature `range` but `tower-http` does not have that feature.
+ package `tower-http` does have feature `trace`
+
+
+failed to select a version for `tower-http` which could resolve this conflict

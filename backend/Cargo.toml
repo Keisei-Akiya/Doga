@@ -1,0 +1,39 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# --- Web / API ---
+axum = "0.8.0"
+tokio = { version = "1.40", features = ["full"] }
+tower-http = { version = "0.6", features = ["fs", "cors", "range", "compression-full"] } # 圧縮も追加
+utoipa = { version = "5.0", features = ["axum_extras", "chrono", "decimal"] }
+utoipa-swagger-ui = { version = "8.0", features = ["axum"] }
+
+# --- Database ---
+sqlx = { version = "0.8", features = ["chrono", "runtime-tokio-native-tls", "postgres", "macros", "uuid"] }
+rust_decimal = { version = "1.36", features = ["serde-float"] }
+
+# --- Media Processing ---
+image = "0.25" # サムネイルの加工用
+mime_guess = "2.0" # Content-Type判定用
+# ffmpegはインストールが大変な場合、最初はCLI呼び出しでもOKですが、型安全ならこれ
+# ffmpeg-next = "7.0"
+
+# --- File System ---
+walkdir = "2.5" # フォルダのスキャン用
+camino = { version = "1.1", features = ["serde1"] } # UTF-8パス
+
+# --- Serialization / Logic ---
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+validator = { version = "0.19", features = ["derive"] }
+# nanoid = "0.4"
+uuid = { version = "1.10", features = ["v7", "serde"] } # ID管理にあると便利
+
+# --- Logging / Env ---
+dotenvy = "0.15"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
