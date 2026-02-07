@@ -26,10 +26,9 @@
 
 ### B. Journal Domain
 
-- **Nut (Entity)**
+- **NutEntry (Entity)**
   - `id`: UUID v7 (Nut日時を内包).
   - `video_id`: 対象動画.
-  - `note`: 付加情報（メモ）.
 - **UsageStatistics (Domain Service)**
   - 指定期間内のNut数、頻度、ストリーク（継続日数）の計算ロジック。
 
