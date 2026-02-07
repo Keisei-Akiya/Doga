@@ -30,8 +30,15 @@ cargo run
 
 ### データベース・マイグレーション
 
+SQLx CLI を使用してマイグレーションを実行します。
+
 ```bash
+# 基本コマンド
 sqlx migrate run
+```
+
+```bash
+sqlx migrate run --database-url "postgres://user:password@localhost:5432/doga"
 ```
 
 ## 📂 ディレクトリ構造

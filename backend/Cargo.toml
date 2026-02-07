@@ -7,8 +7,8 @@ edition = "2024"
 # --- Web / API ---
 axum = "0.8.0"
 tokio = { version = "1.40", features = ["full"] }
-tower-http = { version = "0.6", features = ["fs", "cors", "range", "compression-full"] } # 圧縮も追加
-utoipa = { version = "5.0", features = ["axum_extras", "chrono", "decimal"] }
+tower-http = { version = "0.6", features = ["fs", "cors", "compression-full"] } # 圧縮も追加
+utoipa = { version = "5.0", features = ["axum_extras", "chrono", "decimal", "uuid"] }
 utoipa-swagger-ui = { version = "8.0", features = ["axum"] }
 
 # --- Database ---
