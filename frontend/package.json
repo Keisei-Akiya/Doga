@@ -13,7 +13,7 @@
 		"test:e2e": "playwright test",
 		"test": "npm run test:unit -- --run && npm run test:e2e",
 		"test:unit": "vitest",
-		"storybook": "storybook dev -p 6006",
+		"sb": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
 		"lint": "biome check .",
 		"format": "biome format --write ."
