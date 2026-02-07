@@ -9,7 +9,7 @@ axum = "0.8.0"
 tokio = { version = "1.40", features = ["full"] }
 tower-http = { version = "0.6", features = ["fs", "cors", "compression-full"] } # 圧縮も追加
 utoipa = { version = "5.0", features = ["axum_extras", "chrono", "decimal", "uuid"] }
-utoipa-swagger-ui = { version = "8.0", features = ["axum"] }
+utoipa-swagger-ui = { version = "9", features = ["axum"] }
 
 # --- Database ---
 sqlx = { version = "0.8", features = ["chrono", "runtime-tokio-native-tls", "postgres", "macros", "uuid"] }
@@ -37,3 +37,5 @@ uuid = { version = "1.10", features = ["v7", "serde"] } # ID管理にあると�
 dotenvy = "0.15"
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+thiserror = "2.0.18"
+anyhow = "1.0.101"
